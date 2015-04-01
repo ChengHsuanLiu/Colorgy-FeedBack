@@ -1,3 +1,287 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import 'materialize/dist/css/materialize';
 
+body{
+	background-image: image-url('typeform-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+img{
+	width: 100%;
+}
+
+a:hover, a:focus{
+	text-decoration: none !important;
+}
+.btn:hover{
+	color: #fff !important;
+}
+
+.description{
+	width: 100%;
+	position: relative;
+
+	.brand-logo{
+		position: relative;
+		z-index: 2;
+		width: 220px;
+		margin-top: 100px;
+		transition: all 0.6s;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.description-bg{
+		width: 4000px;
+		height: 2000px;
+		position: absolute;
+		top: 0;
+		left: -2000px;
+		background-color: rgba(54, 151, 155, 0.6);
+		transform: rotate(45deg) skewX(-45deg);
+		z-index: 1;
+		transition: all 0.8s;
+	}
+
+	.description-title{
+		position: relative;
+		z-index: 2;
+		margin-top: 100px;
+		transition: all 0.6s;
+		h5{
+			color: #fff;
+			line-height: 2.65rem;
+		}
+
+		h6{
+			color: #fff;
+			opacity: 0.85;
+		}
+	}
+
+	.form-toggle-pc{
+		position: relative;
+		margin-top: 30px;
+		width: 180px;
+		text-align: center;
+		color: #fff;
+		z-index: 2;
+		cursor: pointer;
+		transition: all 0.6s;
+	}
+
+	.links{
+		position: relative;
+		margin-top: 100px;
+		z-index: 2;
+		color: #fff;
+		transition: all 0.6s;
+
+	}
+
+}
+
+.links-ul{
+	li{
+		list-style-type: none;
+	  	display: inline-block;
+	  	width: 35px;
+	  	border-radius: 70px;
+	  	padding: 5px;
+	  	margin: 5px 10px;
+	  	border: 1px solid #fff;
+	  	position: relative;
+	  	transition: all 0.6s;
+	}
+
+	.website{
+		img{
+			transition: all 0.6s;
+		}
+		&:hover{
+			margin-right: 120px !important;
+
+			img{
+				transform: rotateY(-180deg) rotateX(-180deg) rotateZ(-180deg);
+			}
+			&:after{
+				left: 120% !important;
+				opacity: 1;
+				visibility: visible;
+			}
+
+		}
+
+		&:after {
+		  content: 'Colorgy Website';
+		  position: absolute;
+		  top: 7px;
+		  width: 120px;
+		  left: 0;
+		  opacity: 0;
+		  visibility: hidden;
+		  color: #fff;
+		  transition: all 0.6s;
+		}
+	}
+	.fb{
+		img{
+			transition: all 0.6s;
+		}
+
+		&:hover{
+			margin-right: 120px !important;
+			img{
+				transform: rotateY(-180deg) rotateX(-180deg) rotateZ(-180deg);
+			}
+			&:after{
+				left: 120% !important;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&:after {
+		  content: 'Colorgy Fanspage';
+		  position: absolute;
+		  top: 7px;
+		  width: 120px;
+		  left: 0;
+		  opacity: 0;
+		  visibility: hidden;
+		  color: #fff;
+		  transition: all 0.6s;
+		}
+	}
+
+	.flyingV{
+		img{
+			transition: all 0.6s;
+		}
+
+		&:hover{
+			margin-right: 120px !important;
+			img{
+				transform: rotateY(-180deg) rotateX(-180deg) rotateZ(-180deg);
+			}
+			&:after{
+				left: 120% !important;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&:after {
+		  content: '資助我們';
+		  position: absolute;
+		  top: 7px;
+		  width: 120px;
+		  left: 0;
+		  opacity: 0;
+		  visibility: hidden;
+		  color: #fff;
+		  transition: all 0.6s;
+		}
+	}
+	.Aboutus{
+		img{
+			transition: all 0.6s;
+		}
+
+		&:hover{
+			margin-right: 120px !important;
+			img{
+				transform: rotateY(-180deg) rotateX(-180deg) rotateZ(-180deg);
+			}
+			&:after{
+				left: 120% !important;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&:after {
+		  content: '關於我們';
+		  position: absolute;
+		  top: 7px;
+		  width: 120px;
+		  left: 0;
+		  opacity: 0;
+		  visibility: hidden;
+		  color: #fff;
+		  transition: all 0.6s;
+		}
+	}
+
+}
+.form-link-field{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background-color: rgba(255,255,255,0.9);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.form-link-field-active{
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.form-link-item{
+	padding-top: 30px;
+	font-weight: 700;
+	text-align: center;
+	color: rgba(54, 151, 155, 0.6);
+	width: 100px;
+	height: 100px;
+	margin: 30px auto;
+	border-radius: 300px;
+	border: 2px solid rgba(54, 151, 155, 0.6);
+	transition: all 0.6s;
+
+	&:hover{
+		transform: rotateY(-180deg) rotateX(-180deg) rotateZ(-180deg);
+	}
+
+}
+.form-link-field-close{
+	position: absolute;
+	top: -30px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 0px;
+	cursor: pointer;
+}
+
+.animate-hidden{
+	opacity: 0;
+	transform: translateX(-200px);
+}
+
+@media screen and (max-width: 991px) {
+	.form-link-field > .container{
+		top: 50px !important;
+		h4{
+			text-align: center;
+		}
+	}
+
+	.brand-logo,.description-title,.links{
+		margin-top: 50px !important;
+	}
+}

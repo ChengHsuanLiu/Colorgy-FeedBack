@@ -1,0 +1,114 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6" style="padding-left:35px;">
+			<div class="description">
+				<div class="brand-logo animate-hidden">
+					<%= image_tag ('logo-whitetext.png') %>
+				</div>
+				<div class="description-bg animate-hidden">
+				</div>
+				<div class="description-title animate-hidden">
+					<h6><span>Colorgy Book 使用者意見調查</span></h6>
+					<h5>
+						<span>
+							在經過一學期的訂書之後，我們需要您的回饋<br>
+							讓我們的能夠進步，提供您更好的服務。
+						</span>
+					</h5>
+				</div>
+				<div class="form-toggle-pc animate-hidden">
+					<button class="btn waves-effect waves-light" type="submit" name="action">我願意提供意見
+					  <i class="mdi-content-send right"></i>
+					</button>
+				</div>
+				<div class="links animate-hidden">
+
+					<div>
+						<ul class="links-ul">
+							<a href="https://books.colorgy.io/">
+								<li class="website">
+									<%= image_tag('home.png') %>
+								</li>
+							</a>
+							<a href="https://www.facebook.com/pages/Colorgy/1529686803975150">
+								<li class="fb">
+									<%= image_tag('facebook-icon.png') %>
+								</li>
+							</a>
+							<a href="https://www.flyingv.cc/project/5939">
+								<li class="flyingV" style="padding: 7px !important;">
+									<%= image_tag('flyingV.png') %>
+								</li>
+							</a>
+							<a href="http://join.clg.io/">
+								<li class="Aboutus" style="padding: 7px !important;">
+									<%= image_tag('aboutus.png') %>
+								</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="form-link-field">
+	<div class="container" style="position:relative; top: 30%;">
+		<div class="row">
+			<div class="col-md-12" style="position:relative;">
+				<div class="form-link-field-close">
+					X
+				</div>
+				<h4>請依照您的情況選擇適合的表單..</h4>
+			</div>
+			<div class="col-md-4">
+				<a href="./have_used_Colorgy.html">
+					<div class="form-link-item">
+						我有用過Colorgy
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4">
+				<a href="./havent_used_Colorgy.html">
+					<div class="form-link-item">
+						我沒有用過Colorgy
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4">
+				<a href="./professor.html">
+					<div class="form-link-item" style="padding-top: 35px !important;">
+						我是教授
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('.form-toggle-pc').click(function(){
+		$('.form-link-field').addClass('form-link-field-active');
+	})
+	$('.form-link-field-close').click(function(){
+		$('.form-link-field').removeClass('form-link-field-active');
+	})
+
+	$(document).ready(function(){
+		var delay1 = setTimeout(function(){
+			$('.description-bg').removeClass('animate-hidden');
+	     }, 500);
+		var delay2 = setTimeout(function(){
+			$('.brand-logo').removeClass('animate-hidden');
+	     }, 1000);
+		var delay3 = setTimeout(function(){
+			$('.description-title').removeClass('animate-hidden');
+	     }, 1500);
+		var delay4 = setTimeout(function(){
+			$('.form-toggle-pc').removeClass('animate-hidden');
+	     }, 2000);
+		var delay5 = setTimeout(function(){
+			$('.links').removeClass('animate-hidden');
+	     }, 2500);
+	})
+</script>
